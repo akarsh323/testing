@@ -1,0 +1,20 @@
+name: Python Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Build Docker
+      run: |
+        docker build -t my-python-app .
+
+    - name: Run tests with pytest
+      run: |
+        pytest
