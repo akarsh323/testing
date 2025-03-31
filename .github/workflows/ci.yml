@@ -1,7 +1,8 @@
 name: Python Tests
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ '*' ] 
 
 jobs:
   test:
