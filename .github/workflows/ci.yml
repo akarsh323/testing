@@ -17,4 +17,4 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest
+        docker run my-python-app "pytest"
